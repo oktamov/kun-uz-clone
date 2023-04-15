@@ -1,0 +1,127 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+    <div class="container">
+
+
+        <div class="row">
+            {% include 'header.html' %}
+            <div class="main col-12">
+                {% include 'news/region.html' %}
+                <div class="row">
+                    <div class="col-9">
+                        <div class="top-news">
+
+                            <div class="top-news_big col-12">
+                                <div class="row">
+                                    {% for new in object_list %}
+                                        {% if new.dolzarb %}
+                                            <div class="big-news_img col-6">
+                                                <img src="{{ new.image }}"
+                                                     alt="big news">
+                                            </div>
+                                            <div class="big-news_content col-6">
+                                                <div class="news-meta">
+                                                    <span>{{ new.pub_year }}</span>
+                                                </div>
+                                                <h2><a href="{% url 'one_news' new.slug %}">{{ new.title }}</a></h2>
+                                                <p><a href="{% url 'one_news' new.slug %}">{{ new.paragraph }}</a>
+                                                </p>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 top-news_small-items">
+
+                            <div class="row">
+                                {% for new in object_list %}
+                                    {% if new.songgi_yangiliklar %}
+                                        <div class="col-6 small-news">
+
+                                            <div class="row">
+
+                                                <div class="small-news_img col-4">
+                                                    <img src="{{ new.image }}"
+                                                         alt="img">
+                                                </div>
+                                                <div class="small-news_content col-8">
+                                                    <div class="news-meta">
+                                                        <span>{{ new.pub_year }}</span>
+                                                    </div>
+                                                    <p><a href="{% url 'one_news' new.slug %}">{{ new.title }}</a>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="editor-choise">
+
+                                <div class="block-title row">
+                                    <a href="#" class="first"><span>Muharrir tanlovi</span></a>
+                                </div>
+
+                                <div class="row">
+                                    {% for news in object_list %}
+                                        {% if not news.songgi_yangiliklar %}
+                                            {% if not news.dolzarb %}
+
+                                                <div class="col-4">
+                                                    <div class="news">
+                                                        <img src="{{ news.image }}"
+                                                             alt="img">
+                                                        <div class="news-meta">
+                                                            <span>{{ news.pub_year}}</span>
+                                                        </div>
+                                                        <a href="{% url 'one_news' news.slug %}"
+                                                           class="news-title">{{ news.title }}</a>
+
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 new_title">
+                        <div class="row col-12">
+                            <div class=" block-title row">
+                                <a href="#"><span>So'nggi yangiliklar</span></a>
+                            </div>
+                            <div class="news-lenta">
+                                {% for news in object_list %}
+                                <div class="news-meta">
+                                    <span>{{ news.pub_year }}</span>
+                                </div>
+                                <a class="news-lenta_title" href="#">{{ news.title }}</a>
+
+                                {% endfor %}
+                            </div>
+
+
+                            <a href="#" class="main-btn col-12">Ko'proq yangiliklar</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+{% endblock content %}

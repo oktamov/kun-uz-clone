@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load hitcount_tags %}
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/col.css">
+    <link rel="stylesheet" href="../../static/css/news.css">
+    <div class="container">
+
+        <div class="row">
+            {% include 'header.html' %}
+            <div class="main col-12">
+                {% include 'news/region.html' %}
+                <div class="row">
+                    <div class="col-3 new_title">
+                        <div class="row col-12">
+                            <div class=" block-title row">
+                                <a href="#"><span>So'nggi yangiliklar</span></a>
+                            </div>
+                            <div class="news-lenta">
+                                {% for news in head_news %}
+                                    <div class="news-meta">
+                                        <span>{{ news.pub_year }}</span>
+                                    </div>
+                                    <a class="news-lenta_title" href="#">{{ news.title }}</a>
+
+                                {% endfor %}
+                            </div>
+
+
+                            <a href="#" class="main-btn col-12">Ko'proq yangiliklar</a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="single-layout__center slc">
+                            <div class="single-header">
+                                <div class="single-header__meta">
+                                    <div class="date">{{ object.pub_year }}</div>
+                                    <div class="view">12344</div>
+
+                                    <div class="share-news">
+                                        <div class="share-news-label">Ulashing</div>
+                                        <div class="share-news-dropdown">
+                                            <div class="list">
+                                                <a href="https://www.facebook.com/sharer.php?s=100&amp;p[title]=AQSh%20%C2%ABOhangaronsement%C2%BBga%20sanksiya%20kiritdi&amp;u=https%3A%2F%2Fkun.uz%2Fuz%2F65879793&amp;t=AQSh%20%C2%ABOhangaronsement%C2%BBga%20sanksiya%20kiritdi&amp;p[summary]=O%E2%80%98zbekistonning%20%C2%ABOhangaronsement%C2%BB%20zavodi%20AQSh%20sanksiyalari%20ostida%20qoldi.%20Alisher%20Usmonovning%20USM%20holdingi%20tarkibidagi%20%C2%ABMetalloinvest%C2%BB%2C%20%C2%ABMegafon%C2%BB%20va%20Akkerman%20Cement%20CA%20(%C2%ABOhangaronsement%C2%BBning%20aksiyadori)%20ham%20yangi%20sanksiyalar%20paketidan%20joy%20olgan.&amp;p[url]=https%3A%2F%2Fkun.uz%2Fuz%2F65879793"
+                                                   class="share-link s_facebook">Facebook</a>
+                                                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fkun.uz%2Fuz%2F65879793&amp;text=O%E2%80%98zbekistonning%20%C2%ABOhangaronsement%C2%BB%20zavodi%20AQSh%20sanksiyalari%20ostida%20qoldi.%20Alisher%20Usmonovning%20USM%20holdingi%20tarkibidagi%20%C2%ABMetalloinvest%C2%BB%2C%20%C2%ABMegafon%C2%BB%20va%20Akkerman%20Cement%20CA%20(%C2%ABOhangaronsement%C2%BBning%20aksiyadori)%20ham%20yangi%20sanksiyalar%20paketidan%20joy%20olgan."
+                                                   class="share-link s_twitter">Twitter</a>
+                                                <a href="https://telegram.me/share/url?url=https%3A%2F%2Fkun.uz%2Fuz%2F65879793 AQSh%20%C2%ABOhangaronsement%C2%BBga%20sanksiya%20kiritdi"
+                                                   class="share-link s_telegram">Telegram</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="single-header__title" style="margin-bottom:-0.1em;">{{ object.title }}</h1>
+                            </div>
+
+                            <div class="single-content">
+                                <h4 style="font-weight: bold;">{{ object.paragraph }}</h4>
+                                <div class="main-img">
+                                    <img src="{{ object.image }}">
+
+                                    <div class="main-img__caption">Foto</div>
+                                </div>
+                                {% if 'https' in object.video %}
+                                    <iframe width="660" height="400"
+                                            src="{{ object.video }}">
+                                    </iframe>
+                                {% else %}
+                                {% endif %}
+                                <p dir="auto">{{ object.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 new_title">
+                        <div class="row col-12">
+                            <div class=" block-title row">
+                                <a href="#"><span>So'nggi yangiliklar</span></a>
+                            </div>
+                            <div class="news-lenta">
+                                {% for news in head_news %}
+                                    <div class="news-meta">
+                                        <span>{{ news.pub_year }}</span>
+                                    </div>
+                                    <a class="news-lenta_title" href="#">{{ news.title }}</a>
+
+                                {% endfor %}
+                            </div>
+
+                            <a href="#" class="main-btn col-12">Ko'proq yangiliklar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock content %}
+
+

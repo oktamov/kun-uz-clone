@@ -1,0 +1,400 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+div {
+    display: block;
+}
+.single-content {
+    font-size: 19px;
+    line-height: 31px;
+    color: #000000;
+    padding: 0 20px;
+    border-left: 1px solid rgba(151, 151, 151, 0.23);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 20px;
+    font-family: "PTSerif";
+}
+
+.single-layout__center.slc {
+    width: -webkit-calc(100%);
+    width: calc(100%);
+}
+.single-layout__center {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+}
+.single-header {
+    padding: 0 20px 20px 20px;
+    position: relative;
+    z-index: 2;
+}
+.single-header__meta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 12px;
+    color: #000000;
+    line-height: 15px;
+    margin-bottom: 10px;
+}
+.single-header__meta .date, .single-header__meta .view, .single-header__meta .comments {
+    margin-right: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+.single-header__meta .view::before {
+    background-image: url(https://kun.uz/assets/99110d40/img/view.svg);
+}
+.single-header__meta .date::before {
+    background-image: url(https://kun.uz/assets/99110d40/img/calendar.svg);
+}
+
+.single-header__meta .date::before, .single-header__meta .view::before, .single-header__meta .comments::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 17px;
+    height: 15px;
+}
+.single-header__meta .date, .single-header__meta .view, .single-header__meta .comments {
+    margin-right: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+.single-header__meta .date::before, .single-header__meta .view::before, .single-header__meta .comments::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 17px;
+    height: 15px;
+}
+
+.share-news {
+    position: relative;
+    margin-left: 10px;
+}
+.share-news-label {
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: url(https://kun.uz/assets/99110d40/img/share.svg) no-repeat center right;
+    background-size: 15px;
+    font-weight: 600;
+    z-index: 2;
+    cursor: pointer;
+    position: relative;
+}
+.share-news .share-news-dropdown {
+    padding: 40px 10px 10px 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    top: -8px;
+    left: -14px;
+    width: -webkit-calc(100% + 28px);
+    width: calc(100% + 28px);
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+}
+.share-news .list {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+.share-news .list a {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 500;
+}
+
+
+.single-header__title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 32px;
+    color: #000000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+.single-header::after {
+    width: 1px;
+    height: -webkit-calc(100% - 25px);
+    height: calc(100% - 25px);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-left: 1px solid rgba(151, 151, 151, 0.23);
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.single-content {
+    font-size: 19px;
+    line-height: 31px;
+    color: #000000;
+    padding: 0 20px;
+    border-left: 1px solid rgba(151, 151, 151, 0.23);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 20px;
+    font-family: 'PTSerif';
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.single-content .main-img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.single-content .main-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.single-content img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+img, legend {
+    border: 0;
+}
+.single-content .main-img__caption {
+    opacity: 0.56;
+    color: #222222;
+    font-family: "Montserrat";
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.06px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.single-content p {
+    font-weight: 500;
+    font-family: "PTSerif";
+}
+
+
+p {
+    unicode-bidi: isolate;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.single-content p {
+    font-weight: 500;
+    font-family: "PTSerif";
+}
+.nativeAdStyle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+.nativeAdStyle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.single-content::after {
+    width: -webkit-calc(100% - 40px);
+    width: calc(100% - 40px);
+    height: 1px;
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    border-bottom: 1px dashed #979797;
+    content: "";
+    opacity: .6;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pr-20 {
+    padding-right: 20px !important;
+}
+
+.pl-20 {
+    padding-left: 20px !important;
+}
+.tags-ui {
+    margin-bottom: 18px;
+}
+.reset-list {
+    padding: 0;
+    margin: 0;
+}
+.reset-list li {
+    list-style: none;
+}
+.tags-ui__items {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.tags-ui__item {
+    margin-right: 25px;
+    margin-bottom: 5px;
+}
+.tags-ui__link {
+    color: #0c2f75;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.single-layout__right {
+    width: 300px;
+    overflow: hidden;
+}
+.block-title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.block-title span {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    padding-left: 25px;
+}
+.block-title span:before {
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 4px solid #17206A;
+    display: block;
+}
+
+.block-title span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #17206A;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.news-recommended {
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    position: relative;
+    border: 1px solid rgba(151, 151, 151, 0.23);
+}
+
+
+.pl-18 {
+    padding-left: 18px !important;
+}
+.news-recommended .news-meta {
+    padding: 0 18px;
+    margin-top: 15px;
+}
+.news-meta {
+    margin-bottom: 10px;
+    opacity: 0.8;
+    color: #000000;
+    font-size: 12px;
+    padding-left: 20px;
+    background: url(https://kun.uz/assets/99110d40/img/calendar.svg) no-repeat center left;
+    background-size: contain;
+}
+.news-meta > span {
+    color: #8F8F8F;
+    font-weight: 300;
+}
+
+.news-meta > span {
+    color: #000;
+    font-weight: 400;
+}
+.news-recommended__title {
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+    width: 100%;
+    padding: 0 18px 18px 18px;
+    display: block;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
+}
+

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/col.css">
+    <div class="container">
+        <div class="row">
+            {% include 'header.html' %}
+            <div class="main col-12">
+                {% include 'news/region.html' %}
+                <div class="row">
+                    <div class="col-9">
+                        <div class="editor-choise">
+
+                            <div class="block-title row">
+                                <a href="#" class="first"><span>Muharrir tanlovi</span></a>
+                            </div>
+
+                            <div class="row">
+                                {% for new in news %}
+                                    <div class="col-4">
+                                        <div class="news">
+                                            <img src="{{ new.image }}"
+                                                 alt="img">
+                                            <div class="news-meta">
+                                                <span>{{ new.pub_year }}</span>
+                                            </div>
+                                            <a href="{% url 'one_news' new.slug %}"
+                                               class="news-title">{{ new.title  | slice:"50"}}</a>
+
+                                        </div>
+                                    </div>
+
+                                {% endfor %}
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 new_title">
+                    <div class="row col-12">
+                        <div class=" block-title row">
+                            <a href="#"><span>So'nggi yangiliklar</span></a>
+                        </div>
+                        <div class="news-lenta">
+                                {% for news in object_list %}
+                                <div class="news-meta">
+                                    <span>{{ news.pub_year }}</span>
+                                </div>
+                                <a class="news-lenta_title" href="#">{{ news.title }}</a>
+
+                                {% endfor %}
+                            </div>
+
+
+                        <a href="#" class="main-btn col-12">Ko'proq yangiliklar</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+{% endblock content %}

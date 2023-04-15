@@ -1,0 +1,66 @@
+<div class="rek col-12">
+    <img src="https://avatars.mds.yandex.net/get-adfox-content/2765366/230401_adfox_1749280_6537318.180b08c33a2555caec34cdd446ae44ba.jpg/optimize.webp"
+         alt="rekjpg">
+</div>
+
+<div class="row">
+    <!--start header-->
+    <div class="row">
+        <div class="col-1">
+            <div class="logo">
+                <a href="{% url 'homepage' %}"><img src="https://kun.uz/assets/99110d40/img/kun-uz-logo.svg" alt="Logo"></a>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="navbar">
+                <nav>
+                    <ul>
+
+                        <li class="nav-item"><a href="{% url 'category' 1 %}">O'zbekiston</a>
+                        <li class="nav-item"><a href="#">Jahon</a>
+                        <li class="nav-item"><a href="#">IQTISODIYOT</a>
+                        <li class="nav-item"><a href="#">JAMIYAT</a>
+                        <li class="nav-item"><a href="#">FAN-TEXNIKA</a>
+                        <li class="nav-item"><a href="#">SPORT</a>
+                        <li class="nav-item"><a href="#">NUQTAYI NAZAR</a>
+                        <li class="nav-item"><a href="#">AUDIO</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+
+        <div class="page-header__options">
+            <div class="menu-btn"></div>
+            <div class="lang-wrapper">
+                <div class="lang-block">
+                    <div class="lang-toggle">
+                        <div class="lang-current">O'zbekcha</div>
+                    </div>
+                    <div class="lang-list">
+                        <div class="lang-block"><a class="lang-link" href="#">Ўзбекча</a>
+                        </div>
+                        <div class="lang-block"><a class="lang-link"
+                                                   href="#">Русский</a></div>
+                        <div class="lang-block"><a class="lang-link"
+                                                   href="#">English</a></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="search">
+                <form class="d-flex" role="search" action="{% url 'search' %}" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Search" name="q" aria-label="Search">
+                    <button type="submit" class="btn btn-outline-secondary">search</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
